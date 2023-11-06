@@ -1,0 +1,36 @@
+﻿@page "/products/create"
+
+<PageTitle>Create Product</PageTitle>
+
+<h3>Create Product</h3>
+
+<ErrorMessage Message="@ErrorMessage" />
+
+<EditForm Model="Model" OnValidSubmit="HandleSubmit">
+    <DataAnnotationsValidator />
+    <label for="name">Name</label>
+    <div class="col-sm-10 mb-2">
+        <InputText @bind-Value="@Model.Name" class="form-control" id="name"/>
+        <ValidationMessage For="@(() => Model.Name)"/>
+    </div>
+    
+    <label for="description">Description</label>
+    <div class="col-sm-10 mb-2">
+        <InputText @bind-Value="@Model.Description" class="form-control" id="description"/>
+        <ValidationMessage For="@(() => Model.Description)"/>
+    </div>
+    
+    <label for="price">Price</label>
+    <div class="col-sm-10 mb-2">
+        <InputNumber @bind-Value="@Model.Price" class="form-control" id="price"/>
+        <ValidationMessage For="@(() => Model.Price)"/>
+    </div>
+    
+    <label for="amount">Amount</label>
+    <div class="col-sm-10 mb-2">
+        <InputNumber @bind-Value="@Model.Amount" class="form-control" id="amount"/>
+        <ValidationMessage For="@(() => Model.Amount)"/>
+    </div>
+    
+    <button type="submit" class="btn btn-primary" disabled="@(!context.Validate() || Submitting)">Create!</button>
+</EditForm>

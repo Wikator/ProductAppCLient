@@ -1,0 +1,114 @@
+﻿@page "/"
+@page "/products"
+
+<PageTitle>Products</PageTitle>
+
+<h1>Product list</h1>
+
+
+<ErrorMessage Message="@ProductListErrorMessage" />
+
+@if (ProductList is null)
+{
+    @if (ProductListErrorMessage is null)
+    {
+        <div class="alert alert-info">
+            Loading...
+        </div>
+    }
+}
+else
+{
+    @foreach(var error in ProductDeleteErrorMessages)
+    {
+        <ErrorMessage Message="@error" />
+    }
+    <NavLink href="products/create" class="btn btn-dark my-4">
+        <span class="oi oi-plus"></span> Create New
+    </NavLink>
+    
+    
+    <div class="row">
+        <div class="col-md-2">
+            <div class="form-group">
+                <label for="filterPriceMin">Min Price:</label>
+                <input type="number" class="form-control" id="filterPriceMin" placeholder="Min Price" @bind="MinPrice" />
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label for="filterPriceMax">Max Price:</label>
+                <input type="number" class="form-control" id="filterPriceMax" placeholder="Max Price" @bind="MaxPrice" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-primary" style="margin-top: 24px;" @onclick="FilterProducts">Apply Filters</button>
+        </div>
+    </div>
+    
+    <ErrorMessage Message="@ProductReportErrorMessage" />
+    <br />
+    <table class="table table-responsive mb-5">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Amount</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var product in ProductList)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Price.ToString("C")</td>
+                <td>@product.Amount</td>
+                <td>@(product.Description ?? "None")</td>
+                <td>
+                    <NavLink class="btn btn-warning" href="@($"products/update/{product._id}")">
+                        <span class="oi oi-pencil"></span> Edit
+                    </NavLink>
+                    <button class="btn btn-danger" onclick="@(() => DeleteProduct(product._id))">
+                        <span class="oi oi-delete"></span> Delete
+                    </button>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    
+    @if (ProductReportList is null)
+    {
+        <button class="btn btn-lg btn-outline-dark" @onclick="GenerateReport">
+            Generate Report
+        </button>
+    }
+    else
+    {
+        <h1>Report</h1>
+        
+        <br />
+        <table class="table table-responsive mb-5">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Total Quantity</th>
+                <th>Total Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var product in ProductReportList)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.TotalQuantity</td>
+                    <td>@product.TotalValue.ToString("C")</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    }
+
+}
