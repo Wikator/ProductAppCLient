@@ -10,52 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0c693a1-a2cf-4428-9533-777c9863dff0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ProductsApp/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Exceptions/ApiException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helpers/AutoMapperProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/DTOs/ProductDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/DTOs/ProductReportDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/DTOs/ProductUpsertDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/Error.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/Error.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/Product/CreateProduct.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/Product/CreateProduct.razor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/Product/Products.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/Product/Products.razor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/Product/UpdateProduct.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/Product/UpdateProduct.razor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/Repo.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/_Host.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductsApp.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductsApp.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Contracts/IProductService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/ProductService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/ErrorMessage.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/MainLayout.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/MainLayout.razor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/NavMenu.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/NavMenu.razor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Imports.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/global.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/css/bootstrap/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/css/bootstrap/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/css/open-iconic/FONT-LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/css/open-iconic/ICON-LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/css/open-iconic/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/css/open-iconic/font/fonts/open-iconic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/css/open-iconic/font/fonts/open-iconic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/css/open-iconic/font/fonts/open-iconic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/css/open-iconic/font/fonts/open-iconic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/css/site.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProductsApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProductsApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Product/Products.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Product/Products.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Repo.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Repo.razor" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -82,12 +40,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -99,6 +58,191 @@
   }
 }</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.ProductsApp: https">
+    <configuration name="Publish ProductsApp to Azure (1)" type="AzureDotNetWebAppPublish" factoryName="Azure Web App">
+      <option name="AZURE_WEB_APP_PROJECT" value="$PROJECT_DIR$/ProductsApp.csproj" />
+      <option name="AZURE_WEB_APP_CONFIGURATION" value="Release" />
+      <option name="AZURE_WEB_APP_PLATFORM" value="Any CPU" />
+      <option name="AZURE_WEB_APP_SUBSCRIPTION_ID" value="b4d730c4-562f-448b-9a53-37cfd1eafbb6" />
+      <option name="AZURE_WEB_APP_IS_CREATE_APP" value="0" />
+      <option name="AZURE_WEB_APP_ID" value="/subscriptions/b4d730c4-562f-448b-9a53-37cfd1eafbb6/resourceGroups/ProductsClient_group/providers/Microsoft.Web/sites/ProductsClient" />
+      <option name="AZURE_WEB_APP_NAME" value="" />
+      <option name="AZURE_WEB_APP_IS_CREATE_RESOURCE_GROUP" value="0" />
+      <option name="AZURE_WEB_APP_RESOURCE_GROUP_NAME" value="" />
+      <option name="AZURE_WEB_APP_OPERATING_SYSTEM" value="WINDOWS" />
+      <option name="AZURE_WEB_APP_IS_CREATE_APP_SERVICE_PLAN" value="0" />
+      <option name="AZURE_WEB_APP_SERVICE_PLAN_ID" value="/subscriptions/b4d730c4-562f-448b-9a53-37cfd1eafbb6/resourceGroups/Resource_group/providers/Microsoft.Web/serverfarms/ASP-Resourcegroup-8d97" />
+      <option name="AZURE_WEB_APP_SERVICE_PLAN_NAME" value="" />
+      <option name="AZURE_WEB_APP_LOCATION" value="eastus" />
+      <option name="AZURE_WEB_APP_PRICING_TIER" value="" />
+      <option name="AZURE_WEB_APP_NET_FRAMEWORK" value="4.7" />
+      <option name="AZURE_WEB_APP_NET_CORE_RUNTIME" value="DOTNETCORE 2.1" />
+      <option name="AZURE_WEB_APP_IS_DEPLOY_TO_SLOT" value="0" />
+      <option name="AZURE_WEB_APP_SLOT_NAME" value="" />
+      <option name="AZURE_WEB_APP_OPEN_BROWSER_PUBLISH" value="0" />
+      <option name="AZURE_SQL_DATABASE_SUBSCRIPTION_ID" value="b4d730c4-562f-448b-9a53-37cfd1eafbb6" />
+      <option name="AZURE_SQL_DATABASE_IS_ENABLED" value="0" />
+      <option name="AZURE_SQL_DATABASE_CONNECTION_STRING_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE" value="0" />
+      <option name="AZURE_SQL_DATABASE_ID" value="/subscriptions/b4d730c4-562f-448b-9a53-37cfd1eafbb6/resourceGroups/Resource_group/providers/Microsoft.Sql/servers/todolistwebtestserver/databases/todolistdb" />
+      <option name="AZURE_SQL_DATABASE_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE_RESOURCE_GROUP" value="0" />
+      <option name="AZURE_SQL_DATABASE_RESOURCE_GROUP_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE_SQL_SERVER" value="0" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_ID" value="" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_ADMIN_LOGIN" value="admin-sql" />
+      <option name="AZURE_SQL_DATABASE_LOCATION" value="eastus" />
+      <option name="AZURE_SQL_DATABASE_COLLATION" value="SQL_Latin1_General_CP1_CI_AS" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Publish ProductsApp to Azure (2)" type="AzureDotNetWebAppPublish" factoryName="Azure Web App">
+      <option name="AZURE_WEB_APP_PROJECT" value="$PROJECT_DIR$/ProductsApp.csproj" />
+      <option name="AZURE_WEB_APP_CONFIGURATION" value="Release" />
+      <option name="AZURE_WEB_APP_PLATFORM" value="Any CPU" />
+      <option name="AZURE_WEB_APP_SUBSCRIPTION_ID" value="b4d730c4-562f-448b-9a53-37cfd1eafbb6" />
+      <option name="AZURE_WEB_APP_IS_CREATE_APP" value="0" />
+      <option name="AZURE_WEB_APP_ID" value="/subscriptions/b4d730c4-562f-448b-9a53-37cfd1eafbb6/resourceGroups/ProductsClient_group/providers/Microsoft.Web/sites/ProductsClient" />
+      <option name="AZURE_WEB_APP_NAME" value="" />
+      <option name="AZURE_WEB_APP_IS_CREATE_RESOURCE_GROUP" value="0" />
+      <option name="AZURE_WEB_APP_RESOURCE_GROUP_NAME" value="" />
+      <option name="AZURE_WEB_APP_OPERATING_SYSTEM" value="WINDOWS" />
+      <option name="AZURE_WEB_APP_IS_CREATE_APP_SERVICE_PLAN" value="0" />
+      <option name="AZURE_WEB_APP_SERVICE_PLAN_ID" value="/subscriptions/b4d730c4-562f-448b-9a53-37cfd1eafbb6/resourceGroups/Resource_group/providers/Microsoft.Web/serverfarms/ASP-Resourcegroup-8d97" />
+      <option name="AZURE_WEB_APP_SERVICE_PLAN_NAME" value="" />
+      <option name="AZURE_WEB_APP_LOCATION" value="eastus" />
+      <option name="AZURE_WEB_APP_PRICING_TIER" value="S1" />
+      <option name="AZURE_WEB_APP_NET_FRAMEWORK" value="4.7" />
+      <option name="AZURE_WEB_APP_NET_CORE_RUNTIME" value="DOTNETCORE 2.1" />
+      <option name="AZURE_WEB_APP_IS_DEPLOY_TO_SLOT" value="0" />
+      <option name="AZURE_WEB_APP_SLOT_NAME" value="" />
+      <option name="AZURE_WEB_APP_OPEN_BROWSER_PUBLISH" value="0" />
+      <option name="AZURE_SQL_DATABASE_SUBSCRIPTION_ID" value="b4d730c4-562f-448b-9a53-37cfd1eafbb6" />
+      <option name="AZURE_SQL_DATABASE_IS_ENABLED" value="0" />
+      <option name="AZURE_SQL_DATABASE_CONNECTION_STRING_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE" value="0" />
+      <option name="AZURE_SQL_DATABASE_ID" value="/subscriptions/b4d730c4-562f-448b-9a53-37cfd1eafbb6/resourceGroups/Resource_group/providers/Microsoft.Sql/servers/todolistwebtestserver/databases/todolistdb" />
+      <option name="AZURE_SQL_DATABASE_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE_RESOURCE_GROUP" value="0" />
+      <option name="AZURE_SQL_DATABASE_RESOURCE_GROUP_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE_SQL_SERVER" value="0" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_ID" value="" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_ADMIN_LOGIN" value="admin-sql" />
+      <option name="AZURE_SQL_DATABASE_LOCATION" value="eastus" />
+      <option name="AZURE_SQL_DATABASE_COLLATION" value="SQL_Latin1_General_CP1_CI_AS" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Publish ProductsApp to Azure (3)" type="AzureDotNetWebAppPublish" factoryName="Azure Web App">
+      <option name="AZURE_WEB_APP_PROJECT" value="$PROJECT_DIR$/ProductsApp.csproj" />
+      <option name="AZURE_WEB_APP_CONFIGURATION" value="Release" />
+      <option name="AZURE_WEB_APP_PLATFORM" value="Any CPU" />
+      <option name="AZURE_WEB_APP_SUBSCRIPTION_ID" value="b4d730c4-562f-448b-9a53-37cfd1eafbb6" />
+      <option name="AZURE_WEB_APP_IS_CREATE_APP" value="0" />
+      <option name="AZURE_WEB_APP_ID" value="/subscriptions/b4d730c4-562f-448b-9a53-37cfd1eafbb6/resourceGroups/ProductsClient_group/providers/Microsoft.Web/sites/ProductsClient" />
+      <option name="AZURE_WEB_APP_NAME" value="" />
+      <option name="AZURE_WEB_APP_IS_CREATE_RESOURCE_GROUP" value="0" />
+      <option name="AZURE_WEB_APP_RESOURCE_GROUP_NAME" value="" />
+      <option name="AZURE_WEB_APP_OPERATING_SYSTEM" value="WINDOWS" />
+      <option name="AZURE_WEB_APP_IS_CREATE_APP_SERVICE_PLAN" value="0" />
+      <option name="AZURE_WEB_APP_SERVICE_PLAN_ID" value="/subscriptions/b4d730c4-562f-448b-9a53-37cfd1eafbb6/resourceGroups/Resource_group/providers/Microsoft.Web/serverfarms/ASP-Resourcegroup-8d97" />
+      <option name="AZURE_WEB_APP_SERVICE_PLAN_NAME" value="" />
+      <option name="AZURE_WEB_APP_LOCATION" value="eastus" />
+      <option name="AZURE_WEB_APP_PRICING_TIER" value="S1" />
+      <option name="AZURE_WEB_APP_NET_FRAMEWORK" value="4.7" />
+      <option name="AZURE_WEB_APP_NET_CORE_RUNTIME" value="DOTNETCORE 2.1" />
+      <option name="AZURE_WEB_APP_IS_DEPLOY_TO_SLOT" value="0" />
+      <option name="AZURE_WEB_APP_SLOT_NAME" value="" />
+      <option name="AZURE_WEB_APP_OPEN_BROWSER_PUBLISH" value="0" />
+      <option name="AZURE_SQL_DATABASE_SUBSCRIPTION_ID" value="b4d730c4-562f-448b-9a53-37cfd1eafbb6" />
+      <option name="AZURE_SQL_DATABASE_IS_ENABLED" value="0" />
+      <option name="AZURE_SQL_DATABASE_CONNECTION_STRING_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE" value="0" />
+      <option name="AZURE_SQL_DATABASE_ID" value="/subscriptions/b4d730c4-562f-448b-9a53-37cfd1eafbb6/resourceGroups/Resource_group/providers/Microsoft.Sql/servers/todolistwebtestserver/databases/todolistdb" />
+      <option name="AZURE_SQL_DATABASE_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE_RESOURCE_GROUP" value="0" />
+      <option name="AZURE_SQL_DATABASE_RESOURCE_GROUP_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE_SQL_SERVER" value="0" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_ID" value="" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_ADMIN_LOGIN" value="admin-sql" />
+      <option name="AZURE_SQL_DATABASE_LOCATION" value="eastus" />
+      <option name="AZURE_SQL_DATABASE_COLLATION" value="SQL_Latin1_General_CP1_CI_AS" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Publish ProductsApp to Azure (4)" type="AzureDotNetWebAppPublish" factoryName="Azure Web App">
+      <option name="AZURE_WEB_APP_PROJECT" value="$PROJECT_DIR$/ProductsApp.csproj" />
+      <option name="AZURE_WEB_APP_CONFIGURATION" value="Release" />
+      <option name="AZURE_WEB_APP_PLATFORM" value="Any CPU" />
+      <option name="AZURE_WEB_APP_SUBSCRIPTION_ID" value="b4d730c4-562f-448b-9a53-37cfd1eafbb6" />
+      <option name="AZURE_WEB_APP_IS_CREATE_APP" value="0" />
+      <option name="AZURE_WEB_APP_ID" value="/subscriptions/b4d730c4-562f-448b-9a53-37cfd1eafbb6/resourceGroups/ProductsClient_group/providers/Microsoft.Web/sites/ProductsClient" />
+      <option name="AZURE_WEB_APP_NAME" value="" />
+      <option name="AZURE_WEB_APP_IS_CREATE_RESOURCE_GROUP" value="0" />
+      <option name="AZURE_WEB_APP_RESOURCE_GROUP_NAME" value="" />
+      <option name="AZURE_WEB_APP_OPERATING_SYSTEM" value="WINDOWS" />
+      <option name="AZURE_WEB_APP_IS_CREATE_APP_SERVICE_PLAN" value="0" />
+      <option name="AZURE_WEB_APP_SERVICE_PLAN_ID" value="/subscriptions/b4d730c4-562f-448b-9a53-37cfd1eafbb6/resourceGroups/Resource_group/providers/Microsoft.Web/serverfarms/ASP-Resourcegroup-8d97" />
+      <option name="AZURE_WEB_APP_SERVICE_PLAN_NAME" value="" />
+      <option name="AZURE_WEB_APP_LOCATION" value="eastus" />
+      <option name="AZURE_WEB_APP_PRICING_TIER" value="S1" />
+      <option name="AZURE_WEB_APP_NET_FRAMEWORK" value="4.7" />
+      <option name="AZURE_WEB_APP_NET_CORE_RUNTIME" value="DOTNETCORE 2.1" />
+      <option name="AZURE_WEB_APP_IS_DEPLOY_TO_SLOT" value="0" />
+      <option name="AZURE_WEB_APP_SLOT_NAME" value="" />
+      <option name="AZURE_WEB_APP_OPEN_BROWSER_PUBLISH" value="0" />
+      <option name="AZURE_SQL_DATABASE_SUBSCRIPTION_ID" value="b4d730c4-562f-448b-9a53-37cfd1eafbb6" />
+      <option name="AZURE_SQL_DATABASE_IS_ENABLED" value="0" />
+      <option name="AZURE_SQL_DATABASE_CONNECTION_STRING_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE" value="0" />
+      <option name="AZURE_SQL_DATABASE_ID" value="/subscriptions/b4d730c4-562f-448b-9a53-37cfd1eafbb6/resourceGroups/Resource_group/providers/Microsoft.Sql/servers/todolistwebtestserver/databases/todolistdb" />
+      <option name="AZURE_SQL_DATABASE_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE_RESOURCE_GROUP" value="0" />
+      <option name="AZURE_SQL_DATABASE_RESOURCE_GROUP_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE_SQL_SERVER" value="0" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_ID" value="" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_ADMIN_LOGIN" value="admin-sql" />
+      <option name="AZURE_SQL_DATABASE_LOCATION" value="eastus" />
+      <option name="AZURE_SQL_DATABASE_COLLATION" value="SQL_Latin1_General_CP1_CI_AS" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Publish ProductsApp to Azure" type="AzureDotNetWebAppPublish" factoryName="Azure Web App">
+      <option name="AZURE_WEB_APP_PROJECT" value="$PROJECT_DIR$/ProductsApp.csproj" />
+      <option name="AZURE_WEB_APP_CONFIGURATION" value="Release" />
+      <option name="AZURE_WEB_APP_PLATFORM" value="Any CPU" />
+      <option name="AZURE_WEB_APP_SUBSCRIPTION_ID" value="b4d730c4-562f-448b-9a53-37cfd1eafbb6" />
+      <option name="AZURE_WEB_APP_IS_CREATE_APP" value="0" />
+      <option name="AZURE_WEB_APP_ID" value="/subscriptions/b4d730c4-562f-448b-9a53-37cfd1eafbb6/resourceGroups/ProductsClient_group/providers/Microsoft.Web/sites/ProductsClient" />
+      <option name="AZURE_WEB_APP_NAME" value="" />
+      <option name="AZURE_WEB_APP_IS_CREATE_RESOURCE_GROUP" value="0" />
+      <option name="AZURE_WEB_APP_RESOURCE_GROUP_NAME" value="" />
+      <option name="AZURE_WEB_APP_OPERATING_SYSTEM" value="WINDOWS" />
+      <option name="AZURE_WEB_APP_IS_CREATE_APP_SERVICE_PLAN" value="0" />
+      <option name="AZURE_WEB_APP_SERVICE_PLAN_ID" value="/subscriptions/b4d730c4-562f-448b-9a53-37cfd1eafbb6/resourceGroups/Resource_group/providers/Microsoft.Web/serverfarms/ASP-Resourcegroup-8d97" />
+      <option name="AZURE_WEB_APP_SERVICE_PLAN_NAME" value="" />
+      <option name="AZURE_WEB_APP_LOCATION" value="eastus" />
+      <option name="AZURE_WEB_APP_PRICING_TIER" value="" />
+      <option name="AZURE_WEB_APP_NET_FRAMEWORK" value="4.7" />
+      <option name="AZURE_WEB_APP_NET_CORE_RUNTIME" value="DOTNETCORE 2.1" />
+      <option name="AZURE_WEB_APP_IS_DEPLOY_TO_SLOT" value="0" />
+      <option name="AZURE_WEB_APP_SLOT_NAME" value="" />
+      <option name="AZURE_WEB_APP_OPEN_BROWSER_PUBLISH" value="1" />
+      <option name="AZURE_SQL_DATABASE_SUBSCRIPTION_ID" value="b4d730c4-562f-448b-9a53-37cfd1eafbb6" />
+      <option name="AZURE_SQL_DATABASE_IS_ENABLED" value="0" />
+      <option name="AZURE_SQL_DATABASE_CONNECTION_STRING_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE" value="0" />
+      <option name="AZURE_SQL_DATABASE_ID" value="/subscriptions/b4d730c4-562f-448b-9a53-37cfd1eafbb6/resourceGroups/Resource_group/providers/Microsoft.Sql/servers/todolistwebtestserver/databases/todolistdb" />
+      <option name="AZURE_SQL_DATABASE_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE_RESOURCE_GROUP" value="0" />
+      <option name="AZURE_SQL_DATABASE_RESOURCE_GROUP_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE_SQL_SERVER" value="0" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_ID" value="" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_ADMIN_LOGIN" value="admin-sql" />
+      <option name="AZURE_SQL_DATABASE_LOCATION" value="eastus" />
+      <option name="AZURE_SQL_DATABASE_COLLATION" value="SQL_Latin1_General_CP1_CI_AS" />
+      <method v="2" />
+    </configuration>
     <configuration name="ProductsApp: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/ProductsApp.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net7.0" />
@@ -158,13 +302,16 @@
       <workItem from="1699295154679" duration="747000" />
       <workItem from="1699295946403" duration="4205000" />
       <workItem from="1699300341797" duration="3345000" />
-      <workItem from="1699303796101" duration="4800000" />
+      <workItem from="1699303796101" duration="5416000" />
+      <workItem from="1699310044908" duration="1481000" />
+      <workItem from="1699372452854" duration="706000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

@@ -10,12 +10,12 @@
 
 @if (ProductList is null)
 {
-    @if (ProductListErrorMessage is null)
-    {
-        <div class="alert alert-info">
-            Loading...
-        </div>
-    }
+    @* @if (ProductListErrorMessage is null) *@
+    @* { *@
+    @*     <div class="alert alert-info"> *@
+    @*         Loading... *@
+    @*     </div> *@
+    @* } *@
 }
 else
 {
@@ -48,36 +48,38 @@ else
     
     <ErrorMessage Message="@ProductReportErrorMessage" />
     <br />
-    <table class="table table-responsive mb-5">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Amount</th>
-            <th>Description</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var product in ProductList)
-        {
-            <tr>
-                <td>@product.Name</td>
-                <td>@product.Price.ToString("C")</td>
-                <td>@product.Amount</td>
-                <td>@(product.Description ?? "None")</td>
-                <td>
-                    <NavLink class="btn btn-warning" href="@($"products/update/{product._id}")">
-                        <span class="oi oi-pencil"></span> Edit
-                    </NavLink>
-                    <button class="btn btn-danger" onclick="@(() => DeleteProduct(product._id))">
-                        <span class="oi oi-delete"></span> Delete
-                    </button>
-                </td>
-            </tr>
-        }
-        </tbody>
-    </table>
+    <div class="table-responsive mb-5">
+        <table class="table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var product in ProductList)
+                {
+                    <tr>
+                        <td>@product.Name</td>
+                        <td>@product.Price.ToString("C")</td>
+                        <td>@product.Amount</td>
+                        <td>@(product.Description ?? "None")</td>
+                        <td>
+                            <NavLink class="btn btn-warning" href="@($"products/update/{product._id}")">
+                                <span class="oi oi-pencil"></span> Edit
+                            </NavLink>
+                            <button class="btn btn-danger" onclick="@(() => DeleteProduct(product._id))">
+                                <span class="oi oi-delete"></span> Delete
+                            </button>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+    </div>
     
     @if (ProductReportList is null)
     {
@@ -90,25 +92,27 @@ else
         <h1>Report</h1>
         
         <br />
-        <table class="table table-responsive mb-5">
-            <thead>
-            <tr>
-                <th>Name</th>
-                <th>Total Quantity</th>
-                <th>Total Value</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach (var product in ProductReportList)
-            {
+        <div class="table-responsive mb-5">
+            <table class="table">
+                <thead>
                 <tr>
-                    <td>@product.Name</td>
-                    <td>@product.TotalQuantity</td>
-                    <td>@product.TotalValue.ToString("C")</td>
+                    <th>Name</th>
+                    <th>Total Quantity</th>
+                    <th>Total Value</th>
                 </tr>
-            }
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                @foreach (var product in ProductReportList)
+                {
+                    <tr>
+                        <td>@product.Name</td>
+                        <td>@product.TotalQuantity</td>
+                        <td>@product.TotalValue.ToString("C")</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
     }
 
 }
