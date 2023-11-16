@@ -1,0 +1,31 @@
+﻿@inject IProductService ProductService
+@rendermode InteractiveServer
+
+<ErrorMessage Message="@ErrorMessage" />
+
+<div class="table-responsive">
+    <QuickGrid Items="ProductReportList" Class="table">
+        <PropertyColumn Property="@(p => p.Name)" Sortable="true" />
+        <PropertyColumn Title="Total Quantity" Property="@(p => p.TotalQuantity)" Sortable="true" />
+        <PropertyColumn Title="Total Price" Property="@(p => p.TotalValue.ToString("C"))" Sortable="true" />
+    </QuickGrid>
+</div>
+
+
+@code {
+    private IQueryable<ProductReportDto>? ProductReportList { get; set; }
+    private string? ErrorMessage { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            ProductReportList = (await ProductService.GetProductReportAsync())?.AsQueryable();
+        }
+        catch (ApiException ex)
+        {
+            ErrorMessage = $"Server responded with status code: {ex.StatusCode} and message: {ex.Message}";
+        }
+    }
+
+}

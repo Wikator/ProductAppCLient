@@ -1,4 +1,7 @@
 ﻿@page "/products/create"
+@inject IProductService ProductService
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
 
 <PageTitle>Create Product</PageTitle>
 
@@ -32,5 +35,28 @@
         <ValidationMessage For="@(() => Model.Amount)"/>
     </div>
     
-    <button type="submit" class="btn btn-primary" disabled="@(!context.Validate() || Submitting)">Create!</button>
+    <button type="submit" class="btn btn-primary" disabled="@(!context.Validate() || IsSubmitting)">Create!</button>
 </EditForm>
+
+@code {
+    
+    private ProductUpsertDto Model { get; } = new();
+    private string? ErrorMessage { get; set; }
+    private bool IsSubmitting { get; set; }
+    
+    private async Task HandleSubmit()
+    {
+        try
+        {
+            IsSubmitting = true;
+            await ProductService.CreateProductAsync(Model);
+            NavigationManager.NavigateTo($"/products");
+        }
+        catch (ApiException ex)
+        {
+            IsSubmitting = false;
+            ErrorMessage = $"Server responded with status code: {ex.StatusCode} and message: {ex.Message}";
+        }
+    }
+
+}

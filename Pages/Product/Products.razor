@@ -1,118 +1,133 @@
 ﻿@page "/"
 @page "/products"
+@inject IProductService ProductService
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
 
 <PageTitle>Products</PageTitle>
 
 <h1>Product list</h1>
 
-
 <ErrorMessage Message="@ProductListErrorMessage" />
 
-@if (ProductList is null)
+
+@foreach(var error in ProductDeleteErrorMessages)
 {
-    @* @if (ProductListErrorMessage is null) *@
-    @* { *@
-    @*     <div class="alert alert-info"> *@
-    @*         Loading... *@
-    @*     </div> *@
-    @* } *@
+    <ErrorMessage Message="@error" />
+}
+<NavLink href="products/create" class="btn btn-dark my-4">
+    <span class="oi oi-plus"></span> Create New
+</NavLink>
+
+<div class="table table-responsive grid">
+    <QuickGrid ItemsProvider="@productProvider" Class="table" Virtualize="true" @ref="grid">
+        <PropertyColumn Property="@(p => p.Name)" Class="w-auto" />
+        <PropertyColumn Title="Price" Property="@(p => p.Price.ToString("C"))" Class="w-auto" >
+            <ColumnOptions>
+                <p>Min: <input type="range" @bind="MinPrice" @bind:event="oninput" min="0" max="350" /> <span class="inline-block w-10">@MinPrice</span></p>
+                <p>Max: <input type="range" @bind="MaxPrice" @bind:event="oninput" min="0" max="350" /> <span class="inline-block w-10">@MaxPrice</span></p>
+            </ColumnOptions>
+        </PropertyColumn>
+        <PropertyColumn Property="@(p => p.Amount)" Class="w-auto" />
+        <PropertyColumn Property="@(p => p.Description)" Class="w-auto" />
+        <TemplateColumn Title="Actions" Class="w-auto">
+            <NavLink class="btn btn-warning" href="@($"products/update/{context._id}")">
+                <span class="oi oi-pencil"></span> Edit
+            </NavLink>
+            <button class="btn btn-danger" onclick="@(() => DeleteProduct(context._id))">
+                <span class="oi oi-delete"></span> Delete
+            </button>
+        </TemplateColumn>
+    </QuickGrid>
+</div>
+
+@if (!ProductReportGenerated)
+{
+    <button class="btn btn-lg btn-outline-dark" @onclick="() => ProductReportGenerated = true">
+        Generate Report
+    </button>
 }
 else
 {
-    @foreach(var error in ProductDeleteErrorMessages)
+    <Report />
+}
+
+@code {
+    
+    private string? ProductListErrorMessage { get; set; }
+    private List<string?> ProductDeleteErrorMessages { get; } = new();
+    private bool ProductReportGenerated { get; set; }
+
+    private QuickGrid<ProductDto>? grid;
+    private GridItemsProvider<ProductDto>? productProvider;
+    private int numResults;
+
+    private int minPrice;
+    private int maxPrice = 350;
+    
+    private int MinPrice
     {
-        <ErrorMessage Message="@error" />
+        get => minPrice;
+        set
+        {
+            minPrice = value;
+            _ = grid?.RefreshDataAsync();
+        }
     }
-    <NavLink href="products/create" class="btn btn-dark my-4">
-        <span class="oi oi-plus"></span> Create New
-    </NavLink>
     
-    
-    <div class="row">
-        <div class="col-md-2">
-            <div class="form-group">
-                <label for="filterPriceMin">Min Price:</label>
-                <input type="number" class="form-control" id="filterPriceMin" placeholder="Min Price" @bind="MinPrice" />
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="form-group">
-                <label for="filterPriceMax">Max Price:</label>
-                <input type="number" class="form-control" id="filterPriceMax" placeholder="Max Price" @bind="MaxPrice" />
-            </div>
-        </div>
-        <div class="col-md-6">
-            <button class="btn btn-primary" style="margin-top: 24px;" @onclick="FilterProducts">Apply Filters</button>
-        </div>
-    </div>
-    
-    <ErrorMessage Message="@ProductReportErrorMessage" />
-    <br />
-    <div class="table-responsive mb-5">
-        <table class="table">
-                <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Amount</th>
-                    <th>Description</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach (var product in ProductList)
-                {
-                    <tr>
-                        <td>@product.Name</td>
-                        <td>@product.Price.ToString("C")</td>
-                        <td>@product.Amount</td>
-                        <td>@(product.Description ?? "None")</td>
-                        <td>
-                            <NavLink class="btn btn-warning" href="@($"products/update/{product._id}")">
-                                <span class="oi oi-pencil"></span> Edit
-                            </NavLink>
-                            <button class="btn btn-danger" onclick="@(() => DeleteProduct(product._id))">
-                                <span class="oi oi-delete"></span> Delete
-                            </button>
-                        </td>
-                    </tr>
-                }
-                </tbody>
-            </table>
-    </div>
-    
-    @if (ProductReportList is null)
+    private int MaxPrice
     {
-        <button class="btn btn-lg btn-outline-dark" @onclick="GenerateReport">
-            Generate Report
-        </button>
+        get => maxPrice;
+        set
+        {
+            maxPrice = value;
+            _ = grid?.RefreshDataAsync();
+        }
     }
-    else
+
+    protected override void OnInitialized()
     {
-        <h1>Report</h1>
-        
-        <br />
-        <div class="table-responsive mb-5">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Total Quantity</th>
-                    <th>Total Value</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach (var product in ProductReportList)
-                {
-                    <tr>
-                        <td>@product.Name</td>
-                        <td>@product.TotalQuantity</td>
-                        <td>@product.TotalValue.ToString("C")</td>
-                    </tr>
-                }
-                </tbody>
-            </table>
-        </div>
+        productProvider = async _ =>
+        {
+            var response = await GetRemoteData();
+            if (response is null)
+            {
+                return GridItemsProviderResult.From(Array.Empty<ProductDto>(), 0);
+            }
+
+            if (numResults == response.Count) return GridItemsProviderResult.From(response, response.Count);
+            
+            numResults = response.Count;
+            StateHasChanged();
+
+            return GridItemsProviderResult.From(response, response.Count());
+        };
+    }
+
+    private async Task<ICollection<ProductDto>?> GetRemoteData()
+    {
+        try
+        {
+           return (await ProductService.GetProductsAsync(MinPrice, MaxPrice))?.ToList();
+        }
+        catch (ApiException ex)
+        {
+            ProductListErrorMessage = $"Server responded with status code: {ex.StatusCode} and message: {ex.Message}";
+            return null;
+        }
+    }
+    
+    private async Task DeleteProduct(string id)
+    {
+        try
+        {
+            await ProductService.DeleteProductAsync(id);
+            _ = grid?.RefreshDataAsync();
+        }
+        catch (ApiException ex)
+        {
+            ProductDeleteErrorMessages.Add($"Server responded with status code: {ex.StatusCode} and message: {ex.Message}");
+        }
     }
 
 }

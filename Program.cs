@@ -1,12 +1,14 @@
 using ProductsApp.Helpers;
 using ProductsApp.Services;
 using ProductsApp.Services.Contracts;
+using ProductsApp;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
 builder.Services.AddScoped(_ => new HttpClient { BaseAddress = new Uri("https://expressproductapi.onrender.com") });
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
@@ -27,7 +29,9 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.MapBlazorHub();
-app.MapFallbackToPage("/_Host");
+app.UseAntiforgery();
+
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
 
 app.Run();
