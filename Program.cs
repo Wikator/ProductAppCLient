@@ -13,6 +13,15 @@ builder.Services.AddScoped(_ => new HttpClient { BaseAddress = new Uri("https://
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
+if (builder.Environment.IsProduction())
+{
+    builder.Services.AddSignalR().AddAzureSignalR(options =>
+    {
+        options.ServerStickyMode = 
+            Microsoft.Azure.SignalR.ServerStickyMode.Required;
+    });
+}
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

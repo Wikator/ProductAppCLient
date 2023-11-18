@@ -1,8 +1,7 @@
 ﻿@page "/"
 @page "/products"
 @inject IProductService ProductService
-@inject NavigationManager NavigationManager
-@rendermode InteractiveServer
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
 
 <PageTitle>Products</PageTitle>
 
@@ -19,18 +18,18 @@
     <span class="oi oi-plus"></span> Create New
 </NavLink>
 
-<div class="table table-responsive grid">
-    <QuickGrid ItemsProvider="@productProvider" Class="table" Virtualize="true" @ref="grid">
-        <PropertyColumn Property="@(p => p.Name)" Class="w-auto" />
-        <PropertyColumn Title="Price" Property="@(p => p.Price.ToString("C"))" Class="w-auto" >
+<div class="grid">
+    <QuickGrid ItemsProvider="@productProvider" Class="table" @ref="grid">
+        <PropertyColumn Property="@(p => p.Name)" />
+        <PropertyColumn Title="Price" Property="@(p => p.Price.ToString("C"))" >
             <ColumnOptions>
                 <p>Min: <input type="range" @bind="MinPrice" @bind:event="oninput" min="0" max="350" /> <span class="inline-block w-10">@MinPrice</span></p>
                 <p>Max: <input type="range" @bind="MaxPrice" @bind:event="oninput" min="0" max="350" /> <span class="inline-block w-10">@MaxPrice</span></p>
             </ColumnOptions>
         </PropertyColumn>
-        <PropertyColumn Property="@(p => p.Amount)" Class="w-auto" />
-        <PropertyColumn Property="@(p => p.Description)" Class="w-auto" />
-        <TemplateColumn Title="Actions" Class="w-auto">
+        <PropertyColumn Property="@(p => p.Amount)" />
+        <PropertyColumn Property="@(p => p.Description)"/>
+        <TemplateColumn Title="Actions">
             <NavLink class="btn btn-warning" href="@($"products/update/{context._id}")">
                 <span class="oi oi-pencil"></span> Edit
             </NavLink>
